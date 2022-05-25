@@ -1,0 +1,43 @@
+void main() 
+{
+  Product carrot = new Product('Морковь', 'Целая');
+  Product cucumber = new Product('Огурец', 'Целая');
+  Product beef = new Product('Говядина', 'Целая');
+  Product olive = new Product('Оливка', 'Целая');
+  
+  Recipe simpleSalad = new Recipe([carrot, cucumber, olive]);
+  print(simpleSalad.isReady);
+  
+  //print(carrot.nameProduct + carrot.conditionCut);
+}
+
+ class Chef
+ {
+   bool shout = false;
+   
+   bool makeSalad()
+   {
+     
+     
+     return false;
+   }
+   
+ }
+
+class Recipe
+{
+  List<Product>? recipe = null;
+  bool isReady = false;
+  Recipe(this.recipe);
+  
+}
+
+class Product
+{
+  String nameProduct = 'cucumber';
+  String conditionCut = 'cube';
+  String howCooked = 'raw';
+  
+  Product(this.nameProduct, this.conditionCut);
+
+}
